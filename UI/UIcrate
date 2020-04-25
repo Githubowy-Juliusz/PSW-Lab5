@@ -1,0 +1,6 @@
+pyuic5 -x LOGIN_REGISTRATION_VIEW.ui -o LoginRegistrationView.py
+pyuic5 -x ADMIN_VIEW.ui -o AdminView.py
+pyuic5 -x USER_VIEW.ui -o UserView.py
+pyuic5 -x ADD_USER_DAILOG.ui -o AddUserDialog.py
+pyuic5 -x RESET_USERS_PASSWORD_DIALOG.ui -o ResetUsersPasswordDialog.py
+pyuic5 -x ADD_EVENT_DIALOG.ui -o AddEventDialog.py

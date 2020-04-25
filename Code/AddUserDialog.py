@@ -1,0 +1,43 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class AddUserDialog():
+	def __init__(self):
+		self.dialog = QtWidgets.QDialog()
+		self.user_name_input = QtWidgets.QLineEdit(self.dialog)
+		self.user_name_input.setGeometry(QtCore.QRect(30, 30, 113, 34))
+		self.user_name_input.setObjectName("user_name_input")
+		self.user_last_name_input = QtWidgets.QLineEdit(self.dialog)
+		self.user_last_name_input.setGeometry(QtCore.QRect(160, 30, 113, 34))
+		self.user_last_name_input.setText("")
+		self.user_last_name_input.setObjectName("user_last_name_input")
+		self.user_login_input = QtWidgets.QLineEdit(self.dialog)
+		self.user_login_input.setGeometry(QtCore.QRect(290, 30, 113, 34))
+		self.user_login_input.setObjectName("user_login_input")
+		self.user_password_input = QtWidgets.QLineEdit(self.dialog)
+		self.user_password_input.setGeometry(QtCore.QRect(30, 80, 113, 34))
+		self.user_password_input.setEchoMode(QtWidgets.QLineEdit.Password)
+		self.user_password_input.setObjectName("user_password_input")
+		self.user_email_input = QtWidgets.QLineEdit(self.dialog)
+		self.user_email_input.setGeometry(QtCore.QRect(160, 80, 113, 34))
+		self.user_email_input.setObjectName("user_email_input")
+		self.user_permission_input = QtWidgets.QLineEdit(self.dialog)
+		self.user_permission_input.setGeometry(QtCore.QRect(290, 80, 113, 34))
+		self.user_permission_input.setObjectName("user_permission_input")
+		self.add_button = QtWidgets.QPushButton(self.dialog)
+		self.add_button.setGeometry(QtCore.QRect(30, 140, 171, 36))
+		self.add_button.setObjectName("add_button")
+		self.cancel_button = QtWidgets.QPushButton(self.dialog)
+		self.cancel_button.setGeometry(QtCore.QRect(220, 140, 181, 36))
+		self.cancel_button.setObjectName("cancel_button")
+		_translate = QtCore.QCoreApplication.translate
+		self.user_name_input.setPlaceholderText(_translate("MainWindow", "Name"))
+		self.user_last_name_input.setPlaceholderText(_translate("MainWindow", "Last name"))
+		self.user_login_input.setPlaceholderText(_translate("MainWindow", "Login"))
+		self.user_password_input.setPlaceholderText(_translate("MainWindow", "Password"))
+		self.user_email_input.setPlaceholderText(_translate("MainWindow", "Email"))
+		self.user_permission_input.setPlaceholderText(_translate("MainWindow", "Permission"))
+		self.add_button.setText(_translate("MainWindow", "Add"))
+		self.cancel_button.setText(_translate("MainWindow", "Cancel"))
+		#
+		self.cancel_button.clicked.connect(self.dialog.close)
+		#
